@@ -101,3 +101,14 @@
 
 <input type="checkbox" id="vitoria-item" />
 <label for="vitoria-item">Ao final, vence quem acumulou mais pontos</label>
+
+<h2>📌 Nota do desenvolvedor</h2>
+<p>Este projeto é um desafio de código originalmente proposto pelo Felipão na DIO. O código base foi adaptado adicionando as funções de sorteio aleatório dos personagens/corredores.</p>
+
+<h2>🚀 Como rodar localmente</h2>
+<ol>
+  <li>Certifique-se de ter o Node.js instalado (https://nodejs.org).</li>
+  <li>Abra o terminal no diretório do projeto (<code>c:\simulador-mariokart</code>).</li>
+  <li>Execute: <code>node src/index.js</code>.</li>
+  <li>Observe no terminal a escolha aleatória dos personagens e o resultado da corrida.</li>
+</ol>
