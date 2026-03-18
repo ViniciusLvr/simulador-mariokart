@@ -44,6 +44,24 @@ const player6 = {
   PONTOS: 0,
 };
 
+const players = [player1, player2, player3, player4, player5, player6];
+
+function shuffleArray(array) {
+  const copy = [...array];
+
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
+function selectPlayers(allPlayers) {
+  const shuffled = shuffleArray(allPlayers);
+  const [racer1, racer2] = shuffled;
+  return [racer1, racer2];
+}
+
 async function rollDice() {
   return Math.floor(Math.random() * 6) + 1;
 }
@@ -189,10 +207,11 @@ async function declareWinner(character1, character2) {
 }
 
 (async function main() {
+  const [racer1, racer2] = selectPlayers(players);
   console.log(
-    `🏁🚨 Corrida entre ${player1.NOME} e ${player2.NOME} começando...\n`,
+    `🏁🚨 Corrida entre ${racer1.NOME} e ${racer2.NOME} começando...\n`,
   );
 
-  await playRaceEngine(player1, player2);
-  await declareWinner(player1, player2);
+  await playRaceEngine(racer1, racer2);
+  await declareWinner(racer1, racer2);
 })();

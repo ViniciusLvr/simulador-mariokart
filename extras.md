@@ -1,6 +1,6 @@
-aplicar melhorias pro codigo
+aplicar melhorias pro codigo:
 
-- sortear aleatoriamente os personagens
+- sortear aleatoriamente os personagens ✅
 
 - confroto
   - sortear aleatoriamente se é um casco(-1 ponto) ou um bomba(-2 pontos)
